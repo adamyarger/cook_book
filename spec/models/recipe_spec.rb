@@ -12,4 +12,6 @@ describe Recipe do
 	it 'is invalid without a title' do
 		expect(build(:recipe, title: nil)).to_not be_valid
 	end
+
+	it { should belong_to(:user) }
 end
