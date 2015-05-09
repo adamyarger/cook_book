@@ -3,14 +3,14 @@ class RecipesController < ApplicationController
 	before_action :authenticate_user!, only: [:create, :update, :destroy]
 
 	def create
-		@recipe = Recipe.new(recipe_params)
+		@recipe = current_user.recipes.build(recipe_params)
 
 		if @recipe.save
 			flash[:success] = "Recipe Created!"
 			redirect_to @recipe
 		else
 			flash[:alert] = "Somthing went wrong"
-			render 'static_pages/root'
+			render :new
 		end
 	end
 
