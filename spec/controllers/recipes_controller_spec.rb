@@ -44,5 +44,19 @@ describe RecipesController, type: :controller do
 	    	end
 	    end
 	end
+
+	describe 'GET #show' do
+		it 'assigns the requested recipe to @recipe' do
+			recipe = FactoryGirl.create :recipe
+			get :show, id: recipe
+			expect(recipe).to eq (recipe)
+		end
+
+		it 'renders the #show view' do
+			recipe = FactoryGirl.create :recipe
+			get :show, id: recipe
+			expect(response).to render_template :show
+		end
+	end
 	
 end
