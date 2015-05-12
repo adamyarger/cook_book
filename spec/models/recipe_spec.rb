@@ -14,4 +14,11 @@ describe Recipe do
 	end
 
 	it { should belong_to(:user) }
+
+	it { should have_attached_file(:picture) }
+	it { should validate_attachment_content_type(:picture).
+	            allowing('image/png', 'image/gif').
+	            rejecting('text/plain', 'text/xml') }
+	it { should validate_attachment_size(:picture).
+                less_than(2.megabytes) }
 end
