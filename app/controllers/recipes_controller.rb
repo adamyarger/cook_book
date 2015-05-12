@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
 			flash[:success] = "Recipe Created!"
 			redirect_to @recipe
 		else
-			flash[:alert] = "Somthing went wrong"
+			flash[:alert] = "you left some things blank"
 			render :new
 		end
 	end

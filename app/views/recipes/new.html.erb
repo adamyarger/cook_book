@@ -1,7 +1,17 @@
 <%= form_for :recipe, url: recipes_path do |f| %>
-    <%= f.text_field :title, placeholder: "Pasta", class: 'full-width' %>
+
+    <%= f.text_field :title, placeholder: "Pasta", class: 'form-control' %>
+    <br>
+    <%= f.text_field :time, placeholder: "how long?", class: 'form-control' %>
+    <br>
+    <%= f.text_field :servings, placeholder: "how many people ac eat?", class: 'form-control' %>
+    <br>
+    <%= f.text_area :description, placeholder: "Why should they cook this", class: "form-control" %>
     <br>
     <%= f.text_area :ingredients, placeholder: "Wait... How good is this song?", class: "form-control" %>
-    <%= f.submit "Submit Post", class: "full-width" %>
+    <br>
+    <%= f.text_area :directions, placeholder: "Why should they cook this", class: "form-control" %>
+    <br>
+    <%= f.submit "Submit Post", class: "btn btn-primary" %>
 
 <% end %>
