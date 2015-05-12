@@ -1,4 +1,5 @@
 <%= form_for :recipe, url: recipes_path do |f| %>
+    
 
     <%= f.text_field :title, placeholder: "Pasta", class: 'form-control' %>
     <br>
@@ -11,6 +12,8 @@
     <%= f.text_area :ingredients, placeholder: "Wait... How good is this song?", class: "form-control" %>
     <br>
     <%= f.text_area :directions, placeholder: "Why should they cook this", class: "form-control" %>
+    <br>
+    <%= f.file_field :picture %>
     <br>
     <%= f.submit "Submit Post", class: "btn btn-primary" %>
 
