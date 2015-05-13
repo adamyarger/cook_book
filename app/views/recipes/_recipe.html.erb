@@ -13,6 +13,8 @@
           <h2>
             <%= link_to recipe.title, recipe %>
           </h2>
+          <p>By <%= recipe.user.email %></p>
+          <p id="cook-time"><%= recipe.cooktime %> minutes</p>
         </div>
       </div>
     <% end %>
