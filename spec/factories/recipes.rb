@@ -3,7 +3,7 @@ FactoryGirl.define do
     title "MyString"
 	description "MyText"
 	ingredients "MyText"
-	time "2015-05-08 17:03:24"
+	cooktime 30
 	user_id 1
 	servings 3
 	directions "MyText"

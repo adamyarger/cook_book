@@ -65,6 +65,8 @@ describe RecipesController, type: :controller do
 			get :index
 		end
 
+		it { is_expected.to respond_with :ok }
+
 		it "returns 4 records from the database" do
 			expect(response).to render_template :index
 		end

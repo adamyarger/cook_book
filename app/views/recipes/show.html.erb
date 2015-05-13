@@ -1,10 +1,15 @@
 
-<div id="recipe-background" class=".col-xs-12 .col-sm-6 .col-md-8">
-	<%= @recipe.title %>
+<div id="recipe-background" class=".col-md-offset-2 .col-md-6">
+	<h1 id="recipe-title"><%= @recipe.title %></h1>
+	<div>
+		<span id="avatar-thumb"><%= image_tag @recipe.user.avatar.url(:thumb) %></span>
+		<span><%= @recipe.minutes %> minutes </span>
+		<span><%= @recipe.servings %></span>
+	</div>
+	
+	<%= @recipe.ingredients %>
+	<%= @recipe.user.email %>
+	<%= image_tag @recipe.picture.url(:medium) %>
+	
 </div>
 
-<%= @recipe.title %>
-<%= @recipe.time %>
-<%= @recipe.ingredients %>
-<%= @recipe.user.email %>
-<%= image_tag @recipe.picture.url(:medium) %>
