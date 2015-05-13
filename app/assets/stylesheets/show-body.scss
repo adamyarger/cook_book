@@ -1,3 +1,8 @@
+#recipe-background{
+	background: #ffffff;
+	padding-bottom: 40px;
+}
+
 #recipe-title{
 	text-align: center;
 }
@@ -13,4 +18,19 @@
 
 #recipe-info{
 	text-align: center;
+}
+
+.show-picture{
+	text-align: center;
+
+	img{
+		margin-top: 26px;
+		margin-bottom: 26px
+	}
+}
+
+.recipe-metadata{
+	border-top: 2px solid black;
+	border-bottom: 1px solid #ccc;
+	height:20px;
 }

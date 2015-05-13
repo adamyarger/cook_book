@@ -8,8 +8,24 @@
 		<span><%= @recipe.servings %></span><i class="fa fa-user"></i>
 	</div>
 	
+	<div class="show-picture">
+		<%= image_tag @recipe.picture.url(:medium) %>
+	</div>
+
+	<div class="row">
+		<div class="recipe-metadata .col-md-6">
+			<div class="pull-right">6 ratings</div>
+		</div>
+	</div>
+
+	<div class="pull-left">
+		<%= @recipe.ingredients %>
+	</div>
+	<div class="pull-right">
+		<%= @recipe.directions %>
+	</div>
 	
-	<%= image_tag @recipe.picture.url(:medium) %>
+	
 	
 </div>
 
