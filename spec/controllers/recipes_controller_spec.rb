@@ -58,5 +58,23 @@ describe RecipesController, type: :controller do
 			expect(response).to render_template :show
 		end
 	end
+
+	describe "GET #index" do
+		before(:each) do
+			4.times { FactoryGirl.create :recipe }
+			get :index
+		end
+
+		it "returns 4 records from the database" do
+			expect(response).to render_template :index
+		end
+	end
 	
 end
+
+
+
+
+
+
+

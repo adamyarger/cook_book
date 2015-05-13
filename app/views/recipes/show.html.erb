@@ -1,8 +1,10 @@
 
-<div id="recipe-background" class=".col-xs-12 .col-sm-6 .col-md-8"><%= @recipe.title %></div>
+<div id="recipe-background" class=".col-xs-12 .col-sm-6 .col-md-8">
+	<%= @recipe.title %>
+</div>
 
 <%= @recipe.title %>
 <%= @recipe.time %>
 <%= @recipe.ingredients %>
 <%= @recipe.user.email %>
-<%= image_tag @recipe.picture.url(:thumb) %>
+<%= image_tag @recipe.picture.url(:medium) %>
