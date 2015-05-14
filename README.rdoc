@@ -1,28 +1,11 @@
-== README
+== Cook Book
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Recipe box wher users can create and share recipes, mainly built to mess around with 
+Redis 
 
-Things you may want to cover:
+Features
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Autocomplete searching for Recipes thanks to Redis
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Rspec tested and approved ;)
