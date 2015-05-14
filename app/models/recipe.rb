@@ -14,14 +14,14 @@ class Recipe < ActiveRecord::Base
   	private
 
   		def load_into_soulmate
-  			loader = Soulmate::Loader.new("recipes")
-  			loader.add("term" => name, "id" => self.id, "data" => {
-  					"link" => Rails.application.routes.url_helpers.recipe_path(self)
-  				})
-  		end
-
-  		def remove_from_soulmate
-  			loader = Soulmate::Loader.new("recipes")
-  			loader.remove("id" => self.id)
-  		end
+				loader = Soulmate::Loader.new("recipes")
+				loader.add("term" => title, "id" => self.id, "data" => {
+					"link" => Rails.application.routes.url_helpers.recipe_path(self)
+			   	})
+			end
+		 
+			def remove_from_soulmate
+				loader = Soulmate::Loader.new("recipes")
+			    loader.remove("id" => self.id)
+			end
 end
